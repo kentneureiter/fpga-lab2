@@ -1,0 +1,55 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 08/19/2024 01:19:05 PM
+// Design Name: 
+// Module Name: multiplexer_tb
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+`timescale 1ns/1ps
+module lab2file_tb;
+wire Y; //output 
+reg [7:0] I;
+reg [2:0] s; //input
+ 
+// Instantiate original module (named DUT {device under test}) 
+lab2file_tb uut (s,I,Y);
+
+initial begin 
+    
+   // #10 I0=8'b00000001; s0=3'b000;
+    
+    
+    
+    
+    #10 I[0]=1'b1;I[1]=1'b0;I[2]=1'b0;I[3]=1'b0;I[4]=l'b0;I[5]=1'b0;I[6]=1'b0;I[7]=1'b0;s[2]=1'b0;s[1]=1'b0;s[0]=1'b0;
+    #10 I[0]=1'b0;I[1]=1'b1;I[2]=1'b0;I[3]=1'b0;I[4]=l'b0;I[5]=1'b0;I[6]=1'b0;I[7]=1'b0;s[2]=1'b0;s[1]=1'b0;s[0]=1'b1;
+    #10 I[0]=1'b0;I[1]=1'b0;I[2]=1'b1;I[3]=1'b0;I[4]=l'b0;I[5]=1'b0;I[6]=1'b0;I[7]=1'b0;s[2]=1'b0;s[1]=1'b1;s[0]=1'b0;
+    #10 I[0]=1'b0;I[1]=1'b0;I[2]=1'b0;I[3]=1'b1;I[4]=l'b0;I[5]=1'b0;I[6]=1'b0;I[7]=1'b0;s[2]=1'b0;s[1]=1'b1;s[0]=1'b1;
+    #10 I[0]=1'b1;I[1]=1'b0;I[2]=1'b0;I[3]=1'b0;I[4]=l'b1;I[5]=1'b0;I[6]=1'b0;I[7]=1'b0;s[2]=1'b1;s[1]=1'b0;s[0]=1'b0;
+    #10 I[0]=1'b1;I[1]=1'b0;I[2]=1'b0;I[3]=1'b0;I[4]=l'b0;I[5]=1'b1;I[6]=1'b0;I[7]=1'b0;s[2]=1'b1;s[1]=1'b0;s[0]=1'b1;
+    #10 I[0]=1'b1;I[1]=1'b0;I[2]=1'b0;I[3]=1'b0;I[4]=l'b0;I[5]=1'b0;I[6]=1'b1;I[7]=1'b0;s[2]=1'b1;s[1]=1'b1;s[0]=1'b0;
+    #10 I[0]=1'b1;I[1]=1'b0;I[2]=1'b0;I[3]=1'b0;I[4]=l'b0;I[5]=1'b0;I[6]=1'b0;I[7]=1'b1;s[2]=1'b1;s[1]=1'b1;s[0]=1'b1;
+    
+    
+    //#10 I0=1'b0;I1=1'b1;I2=1'b0;I3=1'b0;s2=1'b0;s1=1'b0;s0=1'b1;
+
+
+	#10 $stop;
+
+end 
+endmodule
+
