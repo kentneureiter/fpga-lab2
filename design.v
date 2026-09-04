@@ -24,9 +24,7 @@ module lab2file(
     input [2:0] s,
     input [7:0] I,
     output Y
-    
-    
-    
+ 
     );
     
     wire w0, w1, w2, w3, w4, w5, w6, w7, n0, n2, n1;
@@ -34,8 +32,9 @@ module lab2file(
     not (n2, s[2]);
     not (n1, s[1]);
     not (n0, s[0]);
-    and(w0, n2, n1, n0, I[0]);
-    and(w1, n2, n1, s0, I[1]);
+    
+    and (w0, n2, n1, n0, I[0]);
+    and (w1, n2, n1, s[0], I[1]);
     and(w2, n2, s[1], n0, I[2]);
     and(w3, n2, s[1], s[0], I[3]);
     and(w4, s[2], n1, n0, I[4]);
